@@ -1,0 +1,269 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|c:\\users\\jimmy\\source\\repos\\philadelphia sweets booking system (resturant)\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|solutionrelative:models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|c:\\users\\jimmy\\source\\repos\\philadelphia sweets booking system (resturant)\\models\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|solutionrelative:models\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|c:\\users\\jimmy\\source\\repos\\philadelphia sweets booking system (resturant)\\data\\philadelphiasweetsresturanddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|solutionrelative:data\\philadelphiasweetsresturanddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|c:\\users\\jimmy\\source\\repos\\philadelphia sweets booking system (resturant)\\migrations\\philadelphiasweetsresturanddbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|solutionrelative:migrations\\philadelphiasweetsresturanddbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|c:\\users\\jimmy\\source\\repos\\philadelphia sweets booking system (resturant)\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|solutionrelative:models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|c:\\users\\jimmy\\source\\repos\\philadelphia sweets booking system (resturant)\\models\\my own stuff\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|solutionrelative:models\\my own stuff\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|c:\\users\\jimmy\\source\\repos\\philadelphia sweets booking system (resturant)\\controllers\\tablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|solutionrelative:controllers\\tablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|c:\\users\\jimmy\\source\\repos\\philadelphia sweets booking system (resturant)\\services\\tableservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|solutionrelative:services\\tableservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|c:\\users\\jimmy\\source\\repos\\philadelphia sweets booking system (resturant)\\repositorys\\tablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|solutionrelative:repositorys\\tablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|c:\\users\\jimmy\\source\\repos\\philadelphia sweets booking system (resturant)\\services\\iservices\\itableservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|solutionrelative:services\\iservices\\itableservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|c:\\users\\jimmy\\source\\repos\\philadelphia sweets booking system (resturant)\\models\\tablebooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|solutionrelative:models\\tablebooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|c:\\users\\jimmy\\source\\repos\\philadelphia sweets booking system (resturant)\\dto\u0027s\\resturanttabledto\u0027s\\tabledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|solutionrelative:dto\u0027s\\resturanttabledto\u0027s\\tabledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|c:\\users\\jimmy\\source\\repos\\philadelphia sweets booking system (resturant)\\repositorys\\irepositorys\\itablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84742D60-5596-431B-96A8-0BF9A04B53C2}|Philadelphia Sweets booking System (Resturant).csproj|solutionrelative:repositorys\\irepositorys\\itablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PhiladelphiaSweetsResturandDBContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Migrations\\PhiladelphiaSweetsResturandDBContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Migrations\\PhiladelphiaSweetsResturandDBContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Migrations\\PhiladelphiaSweetsResturandDBContextModelSnapshot.cs",
+              "RelativeToolTip": "Migrations\\PhiladelphiaSweetsResturandDBContextModelSnapshot.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T22:19:48.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "Models\\Employee.cs",
+              "ToolTip": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Models\\Employee.cs",
+              "RelativeToolTip": "Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T22:15:39.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Models\\my own stuff\\Customer.cs",
+              "RelativeDocumentMoniker": "Models\\my own stuff\\Customer.cs",
+              "ToolTip": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Models\\my own stuff\\Customer.cs",
+              "RelativeToolTip": "Models\\my own stuff\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T22:14:07.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Models\\Booking.cs",
+              "RelativeDocumentMoniker": "Models\\Booking.cs",
+              "ToolTip": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Models\\Booking.cs",
+              "RelativeToolTip": "Models\\Booking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T21:00:34.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TableBooking.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Models\\TableBooking.cs",
+              "RelativeDocumentMoniker": "Models\\TableBooking.cs",
+              "ToolTip": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Models\\TableBooking.cs",
+              "RelativeToolTip": "Models\\TableBooking.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T20:59:36.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Table.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Models\\Table.cs",
+              "RelativeDocumentMoniker": "Models\\Table.cs",
+              "ToolTip": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Models\\Table.cs",
+              "RelativeToolTip": "Models\\Table.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T20:59:30.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TableDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\DTO\u0027s\\ResturantTableDTO\u0027s\\TableDTO.cs",
+              "RelativeDocumentMoniker": "DTO\u0027s\\ResturantTableDTO\u0027s\\TableDTO.cs",
+              "ToolTip": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\DTO\u0027s\\ResturantTableDTO\u0027s\\TableDTO.cs",
+              "RelativeToolTip": "DTO\u0027s\\ResturantTableDTO\u0027s\\TableDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T19:15:49.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TableServices.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Services\\TableServices.cs",
+              "RelativeDocumentMoniker": "Services\\TableServices.cs",
+              "ToolTip": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Services\\TableServices.cs",
+              "RelativeToolTip": "Services\\TableServices.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAkwEgAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T15:27:23.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TableRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Repositorys\\TableRepository.cs",
+              "RelativeDocumentMoniker": "Repositorys\\TableRepository.cs",
+              "ToolTip": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Repositorys\\TableRepository.cs",
+              "RelativeToolTip": "Repositorys\\TableRepository.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAA5wCYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T15:27:04.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ITableRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Repositorys\\IRepositorys\\ITableRepository.cs",
+              "RelativeDocumentMoniker": "Repositorys\\IRepositorys\\ITableRepository.cs",
+              "ToolTip": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Repositorys\\IRepositorys\\ITableRepository.cs",
+              "RelativeToolTip": "Repositorys\\IRepositorys\\ITableRepository.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAawA8AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T15:26:51.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ITableServices.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Services\\IServices\\ITableServices.cs",
+              "RelativeDocumentMoniker": "Services\\IServices\\ITableServices.cs",
+              "ToolTip": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Services\\IServices\\ITableServices.cs",
+              "RelativeToolTip": "Services\\IServices\\ITableServices.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T15:21:26.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TableController.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Controllers\\TableController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TableController.cs",
+              "ToolTip": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Controllers\\TableController.cs",
+              "RelativeToolTip": "Controllers\\TableController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAYwBkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T15:15:35.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PhiladelphiaSweetsResturandDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Data\\PhiladelphiaSweetsResturandDBContext.cs",
+              "RelativeDocumentMoniker": "Data\\PhiladelphiaSweetsResturandDBContext.cs",
+              "ToolTip": "C:\\Users\\Jimmy\\source\\repos\\Philadelphia Sweets booking System (Resturant)\\Data\\PhiladelphiaSweetsResturandDBContext.cs",
+              "RelativeToolTip": "Data\\PhiladelphiaSweetsResturandDBContext.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAwwCAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T14:33:00.472Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
