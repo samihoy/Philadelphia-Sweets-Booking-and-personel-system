@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Philadelphia Sweets booking System (Resturant)")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65abd3892b35a4c1d4638c9d26005c16282b6a17")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9808a7bf0fed1d39436d1eedda16d466b0017d28")]
 [assembly: System.Reflection.AssemblyProductAttribute("Philadelphia Sweets booking System (Resturant)")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Philadelphia Sweets booking System (Resturant)")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

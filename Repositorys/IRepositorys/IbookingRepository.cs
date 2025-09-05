@@ -4,11 +4,11 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Repositorys.IRepository
 {
     public interface IbookingRepository
     {
-        Task<List<Booking>> GetAllBookingAsync();
-        Task<Booking?> GetBookingAsync(int bookingId);
-        Task<int> AddBookingAsync(Booking booking);
-        Task<int> EditBookingAsync(Booking booking);
-        Task<int> DeleteBookingAsync(int bookingId);
+        Task<List<Booking>> RepoGetAllAsync();
+        Task<Booking?> RepoGetByIdAsync(int bookingId);
+        Task<int> RepoAddAsync(Booking booking);
+        Task<int> RepoUpdateAsync(Booking booking);
+        Task<int> RepoDeleteAsync(int bookingId);
 
     }
 }

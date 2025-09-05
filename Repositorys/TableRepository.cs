@@ -17,40 +17,40 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Repositorys
             _context = context;
         }
 
-        public async Task<int> AddTableAsync(Table table)
+        public async Task<int> RepoAddAsync(Table table)
         {
             _context.Tables.Add(table);
             var results = await _context.SaveChangesAsync();
             return results > 0 ? table.Id : 0;
         }
 
-        public async Task<bool> DeleteTableAsync(int tableId)
+        public async Task<bool> RepoDeleteAsync(int tableId)
         {
             var tables = await _context.Tables.Where(u => u.Id == tableId).ExecuteDeleteAsync();
             return tables > 0;
         }
-        public async Task<int> DeleteTablesAsync(List<int> tableIds)
+        public async Task<int> RepoDeleteAsync(List<int> tableIds)
         {
             var results = await _context.Tables.Where(t => tableIds.Contains(t.Id)).ExecuteDeleteAsync();
 
             return results;
         }
 
-        public async Task<bool> EditTableAsync(Table table)
+        public async Task<bool> RepoUpdateAsync(Table table)
         {
             _context.Tables.Update(table);
             var results = await _context.SaveChangesAsync();
 
             return results > 0;        
         }
-        public async Task<List<Table>> GetAllTablesAsync()
+        public async Task<List<Table>> RepoGetAllAsync()
         {
             var tables = await _context.Tables.ToListAsync();
 
             return tables;
         }
 
-        public async Task<Table?> GetTableByIdAsync(int tableid)
+        public async Task<Table?> RepoGetByIdAsync(int tableid)
         {
             var table = await _context.Tables.FirstOrDefaultAsync(t=>t.Id==tableid);
 
