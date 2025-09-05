@@ -1,6 +1,0 @@
-@Philadelphia_Sweets_booking_System__Resturant__HostAddress = http://localhost:5009
-
-GET {{Philadelphia_Sweets_booking_System__Resturant__HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
