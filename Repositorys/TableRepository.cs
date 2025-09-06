@@ -20,7 +20,7 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Repositorys
         public async Task<int> RepoAddAsync(Table table)
         {
             _context.Tables.Add(table);
-            var results = await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
             return table.Id;
         }
 

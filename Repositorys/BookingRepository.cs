@@ -5,7 +5,7 @@ using Philadelphia_Sweets_booking_System__Resturant_.Repositorys.IRepositorys;
 
 namespace Philadelphia_Sweets_booking_System__Resturant_.Repositorys
 {
-    public class BookingRepository : IbookingRepository
+    public class BookingRepository : IBookingRepository
     {
         private readonly PhiladelphiaSweetsResturandDBContext _context;
 
@@ -17,28 +17,22 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Repositorys
         public async Task<int> RepoAddAsync(Booking booking)
         {
             _context.Bookings.Add(booking);
-            var results =await _context.SaveChangesAsync();
-            if(results>0)
-            {
-                return booking.Id;
-            }
-            throw new Exception("operation failed, table not added to database");
+            await _context.SaveChangesAsync();
+            return booking.Id;
+
+            //var results =await _context.SaveChangesAsync();
+            //if(results>0)
+            //{
+            //    return booking.Id;
+            //}
+            //throw new Exception("operation failed, table not added to database");
         }
 
         public async Task<int> RepoDeleteAsync(int bookingId)
         {
             var results = await _context.Bookings.Where(b => b.Id == bookingId).ExecuteDeleteAsync();
 
-            return results>0 ? bookingId : 0;
-
-            if (results > 0)
-            {
-                return bookingId;
-            }
-            else
-            {
-                return 0;
-            }
+            return results;
         }
 
         public async Task<int> RepoUpdateAsync(Booking booking)
@@ -46,7 +40,7 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Repositorys
             _context.Bookings.Update(booking);
             var results = await _context.SaveChangesAsync();
 
-            return results > 0 ? booking.Id : 0;
+            return booking.Id;
         }
 
         public Task<List<Booking>> RepoGetAllAsync()
