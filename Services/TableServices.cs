@@ -15,100 +15,101 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services
             _tableRepo = repo;
         }
 
-        public async Task<int> AddTableAsync(TableDTO tableDTO)
+        public async Task<int> AddTableAsync(TableDTO DTO)
         {
             var table = new Table 
             {
-                Number=tableDTO.Number,
-                Seats=tableDTO.Seats,
-                IsAvalible=tableDTO.IsAvalible
+                Seats=DTO.Seats,
             };
 
-            var tableId = await _tableRepo.AddTableAsync(table);
-
-            if (tableId==0)
-            {
-                throw new InvalidOperationException("Operation failed, Table not added");
+            try
+            { 
+                return await _tableRepo.RepoAddAsync(table);
             }
-            return tableId;
+            catch(Exception ex)
+            {
+                throw new InvalidOperationException($"Failed to add table {ex}");
+            }
+        }
+        public async Task<int> DeleteTableAsync(int id)
+        {
+            var rowsAffected = await _tableRepo.RepoDeleteAsync(id);
+
+            try
+            {
+                if(rowsAffected==0)
+                {
+                    throw new InvalidOperationException($"Failed to delete table with ID {id}");
+                }
+                return rowsAffected;
+            }
+            catch(Exception ex)
+            {
+                throw new InvalidOperationException($"Failed to delete table. {ex}");
+            }
+
         }
 
-        public async Task<bool> RemoveTableAsync(int id)
+        public async Task<int> UpdateTableAsync(TableDTO DTO)
         {
-            var results = await _tableRepo.DeleteTableAsync(id);
+            var table = await _tableRepo.RepoGetByIdAsync(DTO.Id);
 
-            if (results==false)
-            {
-                throw new InvalidOperationException("Operation failed, No table deleted");
+            try 
+            { 
+                if (table != null)
+                {
+                    table.Seats = DTO.Seats;
+                }
+                var rowsAffected = await _tableRepo.RepoUpdateAsync(table);
+                return rowsAffected;
             }
-            return results;
-
-        }
-        public async Task<int> RemoveTablesAsync(List<int> tableIds)
-        {
-            var results = await _tableRepo.DeleteTablesAsync(tableIds);
-
-            if(results==0)
+            catch(Exception ex)
             {
-                throw new InvalidOperationException("Operation failed, Tables were removed");
+                throw new InvalidOperationException($"Failed to update table. {ex}");
             }
-            return results;
-        }
-
-        public async Task<bool> UpdateTableAsync(TableDTO DTOtable)
-        {
-            var table = await _tableRepo.GetTableByIdAsync(DTOtable.Id);
-
-            if (table != null)
-            {
-                table.Number = DTOtable.Number;
-                table.Seats = DTOtable.Seats;
-                table.IsAvalible = DTOtable.IsAvalible;
-            }
-
-            var results = await _tableRepo.EditTableAsync(table);
-
-            if(results==false)
-            {
-                throw new InvalidOperationException("Operation failed, Changes not saved");
-            }
-            return results;
-            
-
         }
 
         public async Task<List<TableDTO>> GetAllTablesAsync()
         {
-            var tables = await _tableRepo.GetAllTablesAsync();
-            var TableDTOs = tables.Select(t => new TableDTO
+            try
+            { 
+                var tables = await _tableRepo.RepoGetAllAsync();
+                var TableDTOs = tables.Select(t => new TableDTO
+                {
+                    Id=t.Id,
+                    Seats = t.Seats
+                }).ToList();
+                return TableDTOs;
+            }
+            catch(Exception ex)
             {
-                Id=t.Id,
-                Number = t.Number,
-                Seats = t.Seats,
-                IsAvalible = t.IsAvalible
-            }).ToList();
-
-            return TableDTOs;
+                throw new InvalidOperationException($"Operation failed. {ex}");
+            }
         }
-
         public async Task<TableDTO> GetTableByIdAsync(int id)
         {
-            var table = await _tableRepo.GetTableByIdAsync(id);
-
-            if(table==null)
+            try
             {
-                throw new InvalidOperationException("Operation failed, No table with that ID, object is null");
+                var table = await _tableRepo.RepoGetByIdAsync(id);
+
+                if (table == null)
+                {
+                    throw new InvalidOperationException("Operation failed, No table with that ID, object is null");
+                }
+
+                var tableDTO = new TableDTO
+                {
+                    Id = table.Id,
+                    Seats = table.Seats
+                };
+
+                return tableDTO;
             }
-
-            var tableDTO = new TableDTO
+            catch(Exception ex)
             {
-                Id = table.Id,
-                Number = table.Number,
-                Seats = table.Seats,
-                IsAvalible = table.IsAvalible
-            };
-
-            return tableDTO;
+                throw new InvalidOperationException($"Could not get table. {ex}");
+            }
         }
+
     }
 }
