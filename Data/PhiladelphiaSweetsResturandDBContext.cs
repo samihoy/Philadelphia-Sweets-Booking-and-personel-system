@@ -17,7 +17,7 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Data
         public DbSet<Dish> Dishes { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Employee> Employees { get; set; }
-        public DbSet<TableBooking> Booking { get; set; }
+        public DbSet<TableBooking> TableBookings { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
