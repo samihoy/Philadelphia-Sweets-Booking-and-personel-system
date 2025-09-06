@@ -8,6 +8,6 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services.IServices
         Task<CreateBookingDTO> GetBookingDTO();
         Task<int> CreateBookingDTO(CreateBookingDTO bookingDTO);
         Task<int> UpdateBooking(CreateBookingDTO bookingDTO);
-        Task<int> RemoverBookingAsyc(int bookingId);
+        Task<int> DeleteBookingAsyc(int bookingId);
     }
 }
