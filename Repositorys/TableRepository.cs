@@ -21,27 +21,21 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Repositorys
         {
             _context.Tables.Add(table);
             var results = await _context.SaveChangesAsync();
-            return results > 0 ? table.Id : 0;
+            return table.Id;
         }
 
-        public async Task<bool> RepoDeleteAsync(int tableId)
+        public async Task<int> RepoDeleteAsync(int Id)
         {
-            var tables = await _context.Tables.Where(u => u.Id == tableId).ExecuteDeleteAsync();
-            return tables > 0;
-        }
-        public async Task<int> RepoDeleteAsync(List<int> tableIds)
-        {
-            var results = await _context.Tables.Where(t => tableIds.Contains(t.Id)).ExecuteDeleteAsync();
-
-            return results;
+            var deleteResults = await _context.Tables.Where(u => u.Id == Id).ExecuteDeleteAsync();
+            return deleteResults;
         }
 
-        public async Task<bool> RepoUpdateAsync(Table table)
+        public async Task<int> RepoUpdateAsync(Table table)
         {
             _context.Tables.Update(table);
-            var results = await _context.SaveChangesAsync();
+            var updateResults = await _context.SaveChangesAsync();
 
-            return results > 0;        
+            return updateResults;
         }
         public async Task<List<Table>> RepoGetAllAsync()
         {
@@ -50,9 +44,9 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Repositorys
             return tables;
         }
 
-        public async Task<Table?> RepoGetByIdAsync(int tableid)
+        public async Task<Table?> RepoGetByIdAsync(int id)
         {
-            var table = await _context.Tables.FirstOrDefaultAsync(t=>t.Id==tableid);
+            var table = await _context.Tables.FirstOrDefaultAsync(t=>t.Id==id);
 
             return table;
         }
