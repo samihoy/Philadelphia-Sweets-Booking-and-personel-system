@@ -7,9 +7,8 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services.IServices
     {
         Task<List<TableDTO>> GetAllTablesAsync();
         Task<TableDTO> GetTableByIdAsync(int id);
-        Task<int> AddTableAsync(TableDTO table);
-        Task<bool> UpdateTableAsync(TableDTO table);
-        Task<bool> RemoveTableAsync(int id);
-        Task<int> RemoveTablesAsync(List<int> tableIds);
+        Task<int> AddTableAsync(TableDTO DTO);
+        Task<int> UpdateTableAsync(TableDTO DTO);
+        Task<int> DeleteTableAsync(int id);
     }
 }
