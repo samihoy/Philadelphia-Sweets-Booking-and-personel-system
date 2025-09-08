@@ -6,7 +6,7 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services.IServices
 {
     public interface IBookingService
     {
-        Task<List<BookingsDTO>> GetAllBookingsServicesAsync();
+        Task<List<GetBookingDTO>> GetAllBookingsServicesAsync();
         Task<GetBookingDTO> GetBookingByIdServicesAsync(int id);
         Task<int> CreateBookingServicesAsync(CreateBookingDTO bookingDTO, List<int> tableIds);
         Task<int> UpdateBookingServicesAsync(UpdateBookingDTO bookingDTO, int id);

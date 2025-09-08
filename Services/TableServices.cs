@@ -1,4 +1,6 @@
-﻿using Philadelphia_Sweets_booking_System__Resturant_.DTO_s.ResturantTableDTO_s;
+﻿using Philadelphia_Sweets_booking_System__Resturant_.DTO_s.BookingDTO_s;
+using Philadelphia_Sweets_booking_System__Resturant_.DTO_s.ResturantTableDTO_s;
+using Philadelphia_Sweets_booking_System__Resturant_.DTO_s.TableDTO_s;
 using Philadelphia_Sweets_booking_System__Resturant_.Models;
 using Philadelphia_Sweets_booking_System__Resturant_.Repositorys.IRepository;
 using Philadelphia_Sweets_booking_System__Resturant_.Services.IServices;
@@ -15,7 +17,7 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services
             _tableRepo = repo;
         }
 
-        public async Task<int> AddTableAsync(TableDTO DTO)
+        public async Task<int> AddTableServicesAsync(TableDTO DTO)
         {
             try
             {
@@ -32,7 +34,7 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services
                 throw new InvalidOperationException($"Failed to add table {ex}");
             }
         }
-        public async Task<int> DeleteTableAsync(int id)
+        public async Task<int> DeleteTableServicesAsync(int id)
         {
             try
             {
@@ -51,11 +53,11 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services
 
         }
 
-        public async Task<int> UpdateTableAsync(TableDTO DTO)
+        public async Task<int> UpdateTableServicesAsync(TableDTO DTO)
         {
             try 
             {
-                var table = await _tableRepo.RepoGetTableByIdAsync(DTO.Id);
+                var table = await _tableRepo.GetTableByIdRepoAsync(DTO.Id);
 
                 if (table != null)
                 {
@@ -73,7 +75,7 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services
             }
         }
 
-        public async Task<List<TableDTO>> GetAllTablesAsync()
+        public async Task<List<TableDTO>> GetAllTablesServicesAsync()
         {
             try
             { 
@@ -92,22 +94,32 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services
                 throw new InvalidOperationException($"Operation failed. {ex}");
             }
         }
-        public async Task<TableDTO> GetTableByIdAsync(int id)
+        public async Task<GetTableDTO> GetTableByIdServicesAsync(int id)
         {
             try
             {
-                var table = await _tableRepo.RepoGetTableByIdAsync(id);
+                var table = await _tableRepo.GetTableByIdRepoAsync(id);
 
                 if (table == null)
                 {
                     throw new InvalidOperationException("Operation failed, No table with that ID, object is null");
                 }
 
-                var tableDTO = new TableDTO
+                var tableDTO = new GetTableDTO
                 {
                     Id = table.Id,
                     Seats = table.Seats,
-                    TableNumber=table.TableNumber
+                    TableNumber = table.TableNumber,
+                    Bookings = table.Bookings.Select(b => new GetBookingDTO
+                    {
+                        Id = b.Id,
+                        StartTime = b.StartTime,
+                        NumberGuests = b.NumberGuests,
+                        BookedUnderName = b.BookedUnderName,
+                        ContactInformationPhone = b.ContactInformationPhone,
+                        DurationMinutes = b.DurationMinutes,
+
+                    }).ToList()
                 };
 
                 return tableDTO;
@@ -118,12 +130,12 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services
             }
         }
 
-        public async Task<List<TableDTO>> GetTablesByIdAsync(List<int> ids)
+        public async Task<List<TableDTO>> GetTablesByIdServicesAsync(List<int> ids)
         {
-            var tables = await _tableRepo.RepoGetTablesByIdAsync(ids);
-
             try
             {
+                var tables = await _tableRepo.RepoGetTablesByIdAsync(ids);
+
                 var tableDTOs = tables.Select(t => new TableDTO
                 {
                     Id = t.Id,
