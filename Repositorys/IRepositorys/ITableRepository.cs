@@ -8,7 +8,7 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Repositorys.IRepository
     {
         Task<List<Table>> RepoGetAllTablesAsync();
         Task<List<Table>> RepoGetTablesByIdAsync(List<int> ids);
-        Task<Table?> RepoGetTableByIdAsync(int id);
+        Task<Table?> GetTableByIdRepoAsync(int id);
         Task<int> RepoAddTableAsync(Table table);
         Task<int> RepoUpdateTableAsync(Table table);
         Task<int> RepoDeleteTableAsync(int Id);
