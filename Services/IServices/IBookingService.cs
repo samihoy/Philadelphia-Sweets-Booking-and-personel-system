@@ -1,13 +1,15 @@
-﻿using Philadelphia_Sweets_booking_System__Resturant_.DTO_s.ResturantBookingDTO_s;
+﻿
+
+using Philadelphia_Sweets_booking_System__Resturant_.DTO_s.BookingDTO_s;
 
 namespace Philadelphia_Sweets_booking_System__Resturant_.Services.IServices
 {
     public interface IBookingService
     {
-        Task<List<CreateBookingDTO>> GetAllBookingDTOs();
-        Task<CreateBookingDTO> GetBookingDTO();
-        Task<int> CreateBookingDTO(CreateBookingDTO bookingDTO);
-        Task<int> UpdateBooking(CreateBookingDTO bookingDTO);
-        Task<int> DeleteBookingAsyc(int bookingId);
+        Task<List<BookingsDTO>> GetAllBookingsServicesAsync();
+        Task<GetBookingDTO> GetBookingByIdServicesAsync(int id);
+        Task<int> CreateBookingServicesAsync(CreateBookingDTO bookingDTO, List<int> tableIds);
+        Task<int> UpdateBookingServicesAsync(UpdateBookingDTO bookingDTO, int id);
+        Task<int> DeleteBookingServicesAsyc(int bookingId);
     }
 }
