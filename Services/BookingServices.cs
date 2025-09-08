@@ -33,7 +33,7 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services
                     Tables=tables
                 };
 
-                var tableId = await _bookingrepo.RepoAddAsync(booking);
+                var tableId = await _bookingrepo.AddBookingRepoAsync(booking);
 
                 return tableId;
                
@@ -48,7 +48,7 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services
         {
             try
             {
-                var rowsDeleted = await _bookingrepo.RepoDeleteAsync(bookingId);
+                var rowsDeleted = await _bookingrepo.DeleteBookingRepoAsync(bookingId);
 
                 return rowsDeleted;
             }
@@ -58,17 +58,21 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services
             }
         }
 
-        public async Task<List<BookingsDTO>> GetAllBookingsServicesAsync()
+        public async Task<List<GetBookingDTO>> GetAllBookingsServicesAsync()
         {
             try
             { 
-                var allBookings = await _bookingrepo.RepoGetAllAsync();
+                var allBookings = await _bookingrepo.GetAllBookingsRepoAsync();
 
-                var allBookingsDTOs = allBookings.Select(b => new BookingsDTO
+                var allBookingsDTOs = allBookings.Select(b => new GetBookingDTO
                 {
-                    StartTime = b.StartTime,
+                    Id = b.Id,
+                    NumberGuests = b.NumberGuests,
+                    BookedUnderName = b.BookedUnderName,
+                    ContactInformationPhone = b.ContactInformationPhone,
                     DurationMinutes = b.DurationMinutes,
-                    TableIds = b.Tables.Select(t=>t.Id).ToList()
+                    StartTime = b.StartTime,
+                    TableIds = b.Tables.Select(t => t.Id).ToList()
 
                 }).ToList();
 
@@ -84,7 +88,7 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services
         {
             try
             {
-                var booking = await _bookingrepo.RepoGetByIdAsync(id);
+                var booking = await _bookingrepo.GetBookingByIdRepoAsync(id);
 
                 var BookingDTO = new GetBookingDTO
                 {
@@ -95,8 +99,9 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services
                     DurationMinutes = booking.DurationMinutes,
                     StartTime = booking.StartTime,
                     TableIds = booking.Tables.Select(t => t.Id).ToList()
-
                 };
+
+                return BookingDTO;
             }
             catch(Exception ex)
             {
@@ -108,7 +113,7 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services
         {
             try
             {
-                var booking = await _bookingrepo.RepoGetByIdAsync(id);
+                var booking = await _bookingrepo.GetBookingByIdRepoAsync(id);
 
                 booking.DurationMinutes = bookingDTO.DurationMinutes;
                 booking.BookedUnderName = bookingDTO.BookedUnderName;
@@ -116,18 +121,15 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services
                 booking.ContactInformationMail = bookingDTO.ContactInformationMail;
                 booking.StartTime = bookingDTO.StartTime;
                 booking.NumberGuests = bookingDTO.NumberGuests;
-                //gör imorgon
-                //booking.Tables = bookingDTO.TablesId.Select()
 
+                var bookingId =await _bookingrepo.UpdatebookingRepoAsync(booking);
 
+                return bookingId;
 
-
-
-                var updatedBooking = await _bookingrepo.RepoUpdateAsync();
             }
             catch(Exception ex)
             {
-                throw new = InvalidOperationException($"Error operation failed {ex}");
+                throw new InvalidOperationException($"Error operation failed {ex}");
             }
         
         }   
