@@ -17,7 +17,6 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Data
         public DbSet<Dish> Dishes { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Employee> Employees { get; set; }
-        public DbSet<TableBooking> TableBookings { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -25,8 +24,8 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Data
 
             TableModel.HasData
                 (
-                    new Table { Id=1, Number=1, Seats=6, IsAvalible=true},
-                    new Table { Id = 2, Number = 2, Seats = 10, IsAvalible = true }
+                    new Table { Id=1, TableNumber=1, Seats=6 },
+                    new Table { Id = 2, TableNumber = 2, Seats = 10 }
 
                 );
 
