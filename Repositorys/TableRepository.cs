@@ -44,9 +44,9 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Repositorys
             return tables;
         }
 
-        public async Task<Table?> RepoGetTableByIdAsync(int id)
+        public async Task<Table?> GetTableByIdRepoAsync(int id)
         {
-            var table = await _context.Tables.FirstOrDefaultAsync(t=>t.Id==id);
+            var table = await _context.Tables.Include(b=>b.Bookings).FirstOrDefaultAsync(t=>t.Id==id);
 
             return table;
         }
