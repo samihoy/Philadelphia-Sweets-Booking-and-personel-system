@@ -21,12 +21,18 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             var TableModel = modelBuilder.Entity<Table>();
+            var BookingModel = modelBuilder.Entity<Booking>();
 
             TableModel.HasData
                 (
                     new Table { Id=1, TableNumber=1, Seats=6 },
                     new Table { Id = 2, TableNumber = 2, Seats = 10 }
 
+                );
+            BookingModel.HasData
+                (
+                    new Booking { Id=1, BookedUnderName="Max Lundberg", ContactInformationPhone="0707254421"},
+                    new Booking { Id=1, BookedUnderName="Felix Lundberg", ContactInformationPhone="05627321"}
                 );
 
         }
