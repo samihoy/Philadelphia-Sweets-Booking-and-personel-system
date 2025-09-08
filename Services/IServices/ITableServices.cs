@@ -6,6 +6,7 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services.IServices
     public interface ITableServices
     {
         Task<List<TableDTO>> GetAllTablesAsync();
+        Task<List<TableDTO>> GetTablesByIdAsync(List<int> ids);
         Task<TableDTO> GetTableByIdAsync(int id);
         Task<int> AddTableAsync(TableDTO DTO);
         Task<int> UpdateTableAsync(TableDTO DTO);
