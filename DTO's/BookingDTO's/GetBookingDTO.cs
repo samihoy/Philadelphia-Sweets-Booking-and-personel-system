@@ -1,7 +1,8 @@
 ﻿namespace Philadelphia_Sweets_booking_System__Resturant_.DTO_s.BookingDTO_s
 {
-    public class CreateBookingDTO
+    public class GetBookingDTO
     {
+        public int Id { get; set; }
         public DateTime StartTime { get; set; }
         public int NumberGuests { get; set; }
         public string BookedUnderName { get; set; }
