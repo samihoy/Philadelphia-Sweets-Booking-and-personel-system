@@ -6,10 +6,11 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Repositorys.IRepository
 {
     public interface ITableRepository
     {
-        Task<List<Table>> RepoGetAllAsync();
-        Task<Table?> RepoGetByIdAsync(int id);
-        Task<int> RepoAddAsync(Table table);
-        Task<int> RepoUpdateAsync(Table table);
-        Task<int> RepoDeleteAsync(int Id);
+        Task<List<Table>> RepoGetAllTablesAsync();
+        Task<List<Table>> RepoGetTablesByIdAsync(List<int> ids);
+        Task<Table?> RepoGetTableByIdAsync(int id);
+        Task<int> RepoAddTableAsync(Table table);
+        Task<int> RepoUpdateTableAsync(Table table);
+        Task<int> RepoDeleteTableAsync(int Id);
     }
 }
