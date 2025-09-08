@@ -3,8 +3,9 @@
     public class Table
     {
         public int Id { get; set; }
+        public int TableNumber { get; set; }
         public int Seats { get; set; }
-        public ICollection<TableBooking> Booking { get; set; } = new List<TableBooking>();
+        public ICollection<Booking> Bookings { get; set; } = new List<Booking>();
 
 
 
