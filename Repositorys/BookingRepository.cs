@@ -45,13 +45,13 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Repositorys
 
         public Task<List<Booking>> RepoGetAllAsync()
         {
-            var bookings = _context.Bookings.ToListAsync();
+            var bookings = _context.Bookings.Include(t=>t.Tables).ToListAsync();
             return bookings;
         }
 
         public Task<Booking?> RepoGetByIdAsync(int bookingId)
         {
-            var table = _context.Bookings.FirstOrDefaultAsync(b => b.Id == bookingId);
+            var table = _context.Bookings.Include(t=>t.Tables).FirstOrDefaultAsync(b => b.Id == bookingId);
             return table;
         }
     }
