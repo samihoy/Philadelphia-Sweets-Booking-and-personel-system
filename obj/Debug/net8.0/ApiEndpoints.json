@@ -1,5 +1,492 @@
 [
   {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginUser",
+        "Type": "Philadelphia_Sweets_booking_System__Resturant_.DTO_s.EmployeeDTO_s.EmployeeLoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newUser",
+        "Type": "Philadelphia_Sweets_booking_System__Resturant_.DTO_s.EmployeeDTO_s.EmployeeRegisterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.BookingController",
+    "Method": "GetAllBookings",
+    "RelativePath": "api/Booking/allbookings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Philadelphia_Sweets_booking_System__Resturant_.DTO_s.BookingDTO_s.GetBookingDTO, Philadelphia Sweets booking System (Resturant), Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.BookingController",
+    "Method": "CreateBooking",
+    "RelativePath": "api/Booking/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "booking",
+        "Type": "Philadelphia_Sweets_booking_System__Resturant_.DTO_s.BookingDTO_s.CreateBookingDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.BookingController",
+    "Method": "DeleteBooking",
+    "RelativePath": "api/Booking/delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.BookingController",
+    "Method": "GetBookingById",
+    "RelativePath": "api/Booking/Get/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Philadelphia_Sweets_booking_System__Resturant_.DTO_s.BookingDTO_s.GetBookingDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.BookingController",
+    "Method": "UpdateBooking",
+    "RelativePath": "api/Booking/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookingInfo",
+        "Type": "Philadelphia_Sweets_booking_System__Resturant_.DTO_s.BookingDTO_s.UpdateBookingDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.DishController",
+    "Method": "GetDishById",
+    "RelativePath": "api/Dish",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Philadelphia_Sweets_booking_System__Resturant_.DTO_s.DishDTO_s.DishDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.DishController",
+    "Method": "AddDish",
+    "RelativePath": "api/Dish/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dish",
+        "Type": "Philadelphia_Sweets_booking_System__Resturant_.DTO_s.DishDTO_s.CreateDishDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.DishController",
+    "Method": "AddDishFromApi",
+    "RelativePath": "api/Dish/addApiDish",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dishName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.DishController",
+    "Method": "AddDishToMenu",
+    "RelativePath": "api/Dish/AddToMenu",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dishId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "menuId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.DishController",
+    "Method": "DeleteDish",
+    "RelativePath": "api/Dish/delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.DishController",
+    "Method": "GetAllDishes",
+    "RelativePath": "api/Dish/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Philadelphia_Sweets_booking_System__Resturant_.DTO_s.DishDTO_s.DishDTO, Philadelphia Sweets booking System (Resturant), Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.DishController",
+    "Method": "GetDishByName",
+    "RelativePath": "api/Dish/GetByName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Philadelphia_Sweets_booking_System__Resturant_.DTO_s.DishDTO_s.DishDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.DishController",
+    "Method": "UpdateDish",
+    "RelativePath": "api/Dish/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dishDto",
+        "Type": "Philadelphia_Sweets_booking_System__Resturant_.DTO_s.DishDTO_s.UpdateDIshDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.MenuController",
+    "Method": "CreateMenu",
+    "RelativePath": "api/Menu/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "menu",
+        "Type": "Philadelphia_Sweets_booking_System__Resturant_.DTO_s.MenuDTO_s.CreateMenuDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.MenuController",
+    "Method": "DeleteMenu",
+    "RelativePath": "api/Menu/delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.MenuController",
+    "Method": "GetAllMenus",
+    "RelativePath": "api/Menu/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Philadelphia_Sweets_booking_System__Resturant_.DTO_s.MenuDTO_s.MenuWithDishesDTO, Philadelphia Sweets booking System (Resturant), Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.MenuController",
+    "Method": "GetMenuById",
+    "RelativePath": "api/Menu/menu{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Philadelphia_Sweets_booking_System__Resturant_.DTO_s.MenuDTO_s.MenuWithDishesDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.MenuController",
+    "Method": "UpdateMeny",
+    "RelativePath": "api/Menu/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "menu",
+        "Type": "Philadelphia_Sweets_booking_System__Resturant_.DTO_s.MenuDTO_s.UpdateMenuThemeDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Philadelphia_Sweets_booking_System__Resturant_.Controllers.TableController",
     "Method": "GetAllTables",
     "RelativePath": "api/Table/alltables",

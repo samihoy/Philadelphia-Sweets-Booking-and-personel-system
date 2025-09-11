@@ -1,4 +1,5 @@
 ﻿using Azure;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Philadelphia_Sweets_booking_System__Resturant_.DTO_s.BookingDTO_s;
@@ -8,6 +9,7 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Admin")]
     public class BookingController : ControllerBase
     {
         private readonly IBookingService _bookingServices;
@@ -28,21 +30,24 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Controllers
 
             return Ok(bookings);
         }
+        [HttpGet("Get/{id}")]
         public async Task<ActionResult<GetBookingDTO>> GetBookingById(int id)
         {
             var booking = await _bookingServices.GetBookingByIdServicesAsync(id);
 
             if(booking==null)
             {
-                return NotFound($"No booking with ID {} found");
+                return NotFound($"No booking found");
             }
 
             return Ok(booking);
 
         }
-        public async Task<ActionResult<int>> CreateBooking(CreateBookingDTO booking, List<int> id)
+
+        [HttpPost("Create")]
+        public async Task<ActionResult<int>> CreateBooking(CreateBookingDTO booking)
         {
-            var bookingId = await _bookingServices.CreateBookingServicesAsync(booking, id);
+            var bookingId = await _bookingServices.CreateBookingServicesAsync(booking);
 
             if(bookingId==0)
             {
@@ -50,6 +55,7 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Controllers
             }
             return Ok(bookingId);
         }
+        [HttpPut("update")]
         public async Task<ActionResult<int>> UpdateBooking(UpdateBookingDTO bookingInfo, int id)
         {
             var rowsAffected = await _bookingServices.UpdateBookingServicesAsync(bookingInfo, id);
@@ -61,6 +67,7 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Controllers
 
             return Ok($"Update Sucessesful, {rowsAffected} tables were changed"); 
         }
+        [HttpDelete("delete")]
         public async Task<ActionResult<int>> DeleteBooking(int id)
         {
             var rowsAffected = await _bookingServices.DeleteBookingServicesAsyc(id);
