@@ -17,11 +17,31 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Services
             _bookingrepo = bookingRepo;
             _tablerepo = tableRepo;
         }
-        public async Task<int> CreateBookingServicesAsync(CreateBookingDTO DTO, List<int> tableIds)
+        public async Task<int> CreateBookingServicesAsync(CreateBookingDTO DTO)
         {
             try
             {
-                var tables = await _tablerepo.RepoGetTablesByIdAsync(tableIds);
+                var start = DTO.StartTime;
+                var end = start.AddMinutes(DTO.DurationMinutes);
+
+                var tables = await _tablerepo.RepoGetTablesByIdAsync(DTO.TableIds.ToList());
+
+                var conflict = tables
+                    .SelectMany(t => t.Bookings)
+                    .Where(b => b.StartTime < end && b.StartTime.AddMinutes(b.DurationMinutes) > start)
+                    .ToList();
+                
+                if(conflict.Any())
+                {
+                    throw new InvalidOperationException("Table alaredy booked for this timeinterval");
+                }
+
+                var seatCapacity = tables.Sum(t => t.Seats);
+
+                if(DTO.NumberGuests>seatCapacity)
+                {
+                    throw new InvalidOperationException($"not enough sets for booking,{seatCapacity} seats");
+                }
 
                 var booking = new Booking
                 {

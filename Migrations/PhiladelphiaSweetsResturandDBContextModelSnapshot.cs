@@ -35,6 +35,28 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Migrations
                     b.HasIndex("TablesId");
 
                     b.ToTable("BookingTable");
+
+                    b.HasData(
+                        new
+                        {
+                            BookingsId = 1,
+                            TablesId = 1
+                        });
+                });
+
+            modelBuilder.Entity("DishMenu", b =>
+                {
+                    b.Property<int>("DishesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MenusId")
+                        .HasColumnType("int");
+
+                    b.HasKey("DishesId", "MenusId");
+
+                    b.HasIndex("MenusId");
+
+                    b.ToTable("DishMenu");
                 });
 
             modelBuilder.Entity("Philadelphia_Sweets_booking_System__Resturant_.Models.Booking", b =>
@@ -49,11 +71,7 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("BookedbyId")
-                        .HasColumnType("int");
-
                     b.Property<string>("ContactInformationMail")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ContactInformationPhone")
@@ -71,9 +89,27 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BookedbyId");
-
                     b.ToTable("Bookings");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            BookedUnderName = "Max Lundberg",
+                            ContactInformationPhone = "0707254421",
+                            DurationMinutes = 120,
+                            NumberGuests = 10,
+                            StartTime = new DateTime(2025, 9, 5, 18, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            BookedUnderName = "Felix Lundberg",
+                            ContactInformationPhone = "05627321",
+                            DurationMinutes = 120,
+                            NumberGuests = 4,
+                            StartTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
                 });
 
             modelBuilder.Entity("Philadelphia_Sweets_booking_System__Resturant_.Models.Customer", b =>
@@ -123,25 +159,42 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Migrations
                     b.Property<bool>("IsPopular")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("MenueId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Picture")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
+                    b.Property<string>("Video")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("pictureUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("MenueId");
-
                     b.ToTable("Dishes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Generic dish 1",
+                            Ingredients = "[\"Your soul\"]",
+                            IsPopular = false,
+                            Name = "I made this....",
+                            Price = 120
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Generic dish 2",
+                            Ingredients = "[\"the soul of your enemy?\"]",
+                            IsPopular = false,
+                            Name = "I made this.....",
+                            Price = 400
+                        });
                 });
 
             modelBuilder.Entity("Philadelphia_Sweets_booking_System__Resturant_.Models.Employee", b =>
@@ -152,25 +205,32 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Email")
-                        .HasColumnType("int");
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EmergencyContact")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Fname")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
-                    b.Property<double>("HourlySalery")
+                    b.Property<double?>("HourlySalery")
                         .HasColumnType("float");
 
                     b.Property<string>("Lname")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("PhoneNumber")
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("nvarchar(80)");
+
+                    b.Property<int?>("PhoneNumber")
                         .HasColumnType("int");
 
                     b.Property<string>("Role")
@@ -180,15 +240,29 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Employees");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "mail@role.com",
+                            Fname = "max",
+                            Lname = "lundberg",
+                            PasswordHash = "$2a$11$IEs5ywZPW2iRRKW5/GV.we3k2PpmGXOVgbXcZOQ3ufUbk4ZmvJHTm",
+                            Role = "admin"
+                        });
                 });
 
-            modelBuilder.Entity("Philadelphia_Sweets_booking_System__Resturant_.Models.Menue", b =>
+            modelBuilder.Entity("Philadelphia_Sweets_booking_System__Resturant_.Models.Menu", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateOnly>("CreatedAt")
+                        .HasColumnType("date");
 
                     b.Property<string>("Theme")
                         .IsRequired()
@@ -197,6 +271,20 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Menues");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateOnly(2025, 9, 12),
+                            Theme = "vegetarian"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateOnly(2025, 9, 12),
+                            Theme = "meditteranian"
+                        });
                 });
 
             modelBuilder.Entity("Philadelphia_Sweets_booking_System__Resturant_.Models.Shift", b =>
@@ -274,22 +362,19 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Philadelphia_Sweets_booking_System__Resturant_.Models.Booking", b =>
+            modelBuilder.Entity("DishMenu", b =>
                 {
-                    b.HasOne("Philadelphia_Sweets_booking_System__Resturant_.Models.Employee", "Bookedby")
+                    b.HasOne("Philadelphia_Sweets_booking_System__Resturant_.Models.Dish", null)
                         .WithMany()
-                        .HasForeignKey("BookedbyId")
+                        .HasForeignKey("DishesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Bookedby");
-                });
-
-            modelBuilder.Entity("Philadelphia_Sweets_booking_System__Resturant_.Models.Dish", b =>
-                {
-                    b.HasOne("Philadelphia_Sweets_booking_System__Resturant_.Models.Menue", null)
-                        .WithMany("Dishes")
-                        .HasForeignKey("MenueId");
+                    b.HasOne("Philadelphia_Sweets_booking_System__Resturant_.Models.Menu", null)
+                        .WithMany()
+                        .HasForeignKey("MenusId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Philadelphia_Sweets_booking_System__Resturant_.Models.Shift", b =>
@@ -306,11 +391,6 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Migrations
             modelBuilder.Entity("Philadelphia_Sweets_booking_System__Resturant_.Models.Employee", b =>
                 {
                     b.Navigation("Shifts");
-                });
-
-            modelBuilder.Entity("Philadelphia_Sweets_booking_System__Resturant_.Models.Menue", b =>
-                {
-                    b.Navigation("Dishes");
                 });
 #pragma warning restore 612, 618
         }

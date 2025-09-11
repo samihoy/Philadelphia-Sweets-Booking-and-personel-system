@@ -46,14 +46,14 @@ namespace Philadelphia_Sweets_booking_System__Resturant_.Repositorys
 
         public async Task<Table?> GetTableByIdRepoAsync(int id)
         {
-            var table = await _context.Tables.Include(b=>b.Bookings).FirstOrDefaultAsync(t=>t.Id==id);
+            var table = await _context.Tables.Include(t=>t.Bookings).FirstOrDefaultAsync(t=>t.Id==id);
 
             return table;
         }
 
         public async Task<List<Table>> RepoGetTablesByIdAsync(List<int> ids)
         {
-            var tables = await _context.Tables.Where(t => ids.Contains(t.Id)).ToListAsync();
+            var tables = await _context.Tables.Include(t=>t.Bookings).Where(t => ids.Contains(t.Id)).ToListAsync();
 
             return tables;
         }
